@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      theatre_id: {
-        type: Sequelize.INTEGER
-      },
       title: {
         type: Sequelize.STRING
       },
