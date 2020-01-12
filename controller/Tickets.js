@@ -13,5 +13,5 @@ exports.show = (req, res) => {
                 model: Theatres
             }]
         }],
-    }).then(theatres=> res.send(theatres))
+    }).then(theatres=> res.send(theatres)).catch(err=> res.send(err))
 }

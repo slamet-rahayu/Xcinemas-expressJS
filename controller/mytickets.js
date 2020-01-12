@@ -22,7 +22,7 @@ exports.show = (req, res) => {
               }]
             }]
           }]
-      }).then(booking=>res.send(booking))
+      }).then(booking=>res.send(booking)).catch(err=>res.send(err))
   }
 
   exports.showseats = (req, res) => {
@@ -40,5 +40,5 @@ exports.show = (req, res) => {
               }]
             }]
           }]
-      }).then(booking=>res.send(booking))
+      }).then(booking=>res.send(booking)).catch(err=>res.send(err))
   }

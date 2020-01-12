@@ -26,7 +26,7 @@ exports.show = (req, res) => {
                   model: Seats
               }]
           }]
-      }).then(booking=>res.send(booking))
+      }).then(booking=>res.send(booking)).catch(err=> res.send(err))
   }
 
   exports.showticket = (req, res) => {
@@ -41,7 +41,7 @@ exports.show = (req, res) => {
                 }]
               }]
           }]
-      }).then(booking=>res.send(booking))
+      }).then(booking=>res.send(booking)).catch(err=>res.send(err))
   }
   exports.index = (req, res) => {
     booking.findAll().then(booking=>res.send(booking))
