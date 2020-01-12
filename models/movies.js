@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     // movies.hasMany(models.favourites, {
     //   foreignKey: 'movies_id'
     // })
-    movies.hasMany(models.shows, {
+    movies.hasMany(models.Shows, {
       foreignKey: 'movie_id'
     })
   };

@@ -1,18 +1,18 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const seats = sequelize.define('seats', {
+  const Seats = sequelize.define('Seats', {
     theatre_id: DataTypes.INTEGER,
     name: DataTypes.STRING,
     seat_no: DataTypes.STRING
   }, {});
-  seats.associate = function(models) {
+  Seats.associate = function(models) {
     // associations can be defined here
-    seats.belongsTo(models.theatres, {
+    Seats.belongsTo(models.Theatres, {
       foreignKey: 'theatre_id'
     })
-    seats.hasMany(models.tickets, {
+    Seats.hasMany(models.Tickets, {
       foreignKey: 'seats_id'
     })
   };
-  return seats;
+  return Seats;
 };

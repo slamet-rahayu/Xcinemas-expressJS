@@ -1,21 +1,21 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const tickets = sequelize.define('tickets', {
+  const Tickets = sequelize.define('Tickets', {
     show_id: DataTypes.INTEGER,
     seats_id: DataTypes.INTEGER,
     ticket_no: DataTypes.STRING
   }, {});
-  tickets.associate = function(models) {
+  Tickets.associate = function(models) {
     // associations can be defined here
-    tickets.belongsTo(models.shows, {
+    Tickets.belongsTo(models.Shows, {
       foreignKey: 'show_id'
     })
-    tickets.belongsTo(models.booking, {
+    Tickets.belongsTo(models.booking, {
       foreignKey: 'id'
     })
-    tickets.belongsTo(models.seats, {
+    Tickets.belongsTo(models.Seats, {
       foreignKey: 'seats_id'
     })
   };
-  return tickets;
+  return Tickets;
 };
