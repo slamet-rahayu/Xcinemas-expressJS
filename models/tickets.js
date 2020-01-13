@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     tickets.belongsTo(models.shows, {
       foreignKey: 'show_id'
     })
-    tickets.belongsTo(models.booking, {
+    tickets.hasMany(models.booking, {
       foreignKey: 'ticket_id'
     })
     tickets.belongsTo(models.seats, {
